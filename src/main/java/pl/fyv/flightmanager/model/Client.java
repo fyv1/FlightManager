@@ -12,14 +12,12 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
     private String firstName;
     private String lastName;
     private String sex;
     private String country;
     private String notes;
     private LocalDate birthdate;
-
     @ElementCollection
     @CollectionTable(name="flight")
     private List<Flight> flightList;

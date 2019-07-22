@@ -11,15 +11,12 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
     private int freeSeats;
-
     @ElementCollection
     @CollectionTable(name="client")
     private List<Client> clientList;
-
     private double price;
 
     public Flight(LocalDateTime departureTime, LocalDateTime arrivalTime, int freeSeats, List<Client> clientList, double price) {
