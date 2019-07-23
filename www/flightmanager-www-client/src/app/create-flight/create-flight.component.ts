@@ -4,6 +4,7 @@ import { FlightService } from '../flight.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Client } from 'src/app/client';
+import { ClientService } from 'src/app/client.service';
 
 @Component({
   selector: 'app-create-flight',
@@ -13,14 +14,20 @@ import { Client } from 'src/app/client';
 export class CreateFlightComponent implements OnInit {
   
   flight: Flight = new Flight();
-  @Input() clients: Client[];  
+  clients: Observable<Client[]>;
   submitted = false;
 
   constructor(private flightService: FlightService,
+    private clientService: ClientService,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.reloadData();
+  }
+
+  reloadData() {
+    this.clients = this.clientService.getClientList();
   }
 
   newFlight(): void {

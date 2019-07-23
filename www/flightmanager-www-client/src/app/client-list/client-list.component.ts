@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { Client } from 'src/app/client';
 import { ClientService } from '../client.service';
 import { Router } from '@angular/router';
-import { ClientListService } from './client-list.service';
 
 @Component({
   selector: 'app-client-list',
@@ -15,15 +14,10 @@ export class ClientListComponent implements OnInit {
   clients: Observable<Client[]>;
 
   constructor(private clientService: ClientService,
-    private router: Router,
-    private clientListService: ClientListService) { }
+    private router: Router) { }
 
   ngOnInit() {
     this.reloadData();
-
-    this.clientListService.change.subscribe(
-      
-    );
   }
 
   reloadData() {
