@@ -22,6 +22,9 @@ public class Client {
     @CollectionTable(name="flight")
     private List<Flight> flightList;
 
+    public Client() {
+    }
+
     public Client(String firstName, String lastName, String sex, String country, String notes, LocalDate birthdate, List<Flight> flightList) {
         this.firstName = firstName;
         this.lastName = lastName;

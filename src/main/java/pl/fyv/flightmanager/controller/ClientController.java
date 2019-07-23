@@ -15,8 +15,13 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/")
 public class ClientController {
-    @Autowired
+
     private ClientRepo repo;
+
+    @Autowired
+    public ClientController(ClientRepo repo) {
+        this.repo = repo;
+    }
 
     @GetMapping("/clients")
     public List<Client> getAllClients() {

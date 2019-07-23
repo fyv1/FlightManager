@@ -19,6 +19,9 @@ public class Flight {
     private List<Client> clientList;
     private double price;
 
+    public Flight() {
+    }
+
     public Flight(LocalDateTime departureTime, LocalDateTime arrivalTime, int freeSeats, List<Client> clientList, double price) {
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;

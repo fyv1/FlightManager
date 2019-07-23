@@ -15,8 +15,14 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/")
 public class FlightController {
-    @Autowired
+
     private FlightRepo repo;
+
+    @Autowired
+    public FlightController(FlightRepo repo) {
+        this.repo = repo;
+    }
+
 
     @GetMapping("/flights")
     public List<Flight> getAllFlights() {
