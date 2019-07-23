@@ -1,1 +1,44 @@
-<p>create-flight works!</p>
+<h3>Create Flight</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="departurePlace">Departure Place</label>
+      <input type="text" class="form-control" id="departurePlace" required [(ngModel)]="flight.departurePlace" name="departurePlace">
+    </div>
+    <div class="form-group">
+      <label for="arrivalPlace">Arrival Place</label>
+      <input type="text" class="form-control" id="arrivalPlace" required [(ngModel)]="flight.arrivalPlace" name="arrivalPlace">
+    </div>
+    <div class="form-group">
+      <label for="departureTime">Departure Time</label>
+      <input type="datetime-local" class="form-control" id="departureTime" required [(ngModel)]="flight.departureTime" name="departureTime">
+    </div>
+
+    <div class="form-group">
+        <label for="departureTime">Arrival Time</label>
+        <input type="datetime-local" class="form-control" id="departureTime" required [(ngModel)]="flight.arrivalTime" name="arrivalTime">
+    </div>
+
+    <div class="form-group">
+        <label for="clientList">Clients</label>
+        <!-- <input type="" class="form-control" id="departureTime" [(ngModel)]="flight.clientList" name="clientList"> -->
+        <select name="clientList" id="clientList" [(ngModel)]="flight.clientList" ></select>
+        <option *ngFor="let client of clients | async" [value]="client.id">
+            {{client.id}} | {{client.firstName}} {{client.lastName}}
+        </option>
+
+    </div>
+
+    <div class="form-group">
+        <label for="departureTime">Price</label>
+        <input type="text" class="form-control" id="departureTime" required [(ngModel)]="flight.price" name="price">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newFlight()">Add</button> -->
+</div>

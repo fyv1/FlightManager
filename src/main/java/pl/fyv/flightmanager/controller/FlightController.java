@@ -49,6 +49,8 @@ public class FlightController {
         Flight flight = repo.findById(flightId)
                 .orElseThrow(FlightNotFoundException::new);
 
+        flight.setDeparturePlace(flightUpdatedInfo.getDeparturePlace());
+        flight.setArrivalPlace(flightUpdatedInfo.getArrivalPlace());
         flight.setDepartureTime(flightUpdatedInfo.getDepartureTime());
         flight.setArrivalTime(flightUpdatedInfo.getArrivalTime());
         flight.setFreeSeats(flightUpdatedInfo.getFreeSeats());

@@ -1,1 +1,34 @@
-<p>flight-list works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Flight List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Departure Place</th>
+            <th>Arrival Place</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Free seats</th>
+            <th>Client List</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights | async">
+            <td>{{flight.departurePlace}}</td>
+            <td>{{flight.arrivalPlace}}</td>
+            <td>{{flight.departureTime}}</td>
+            <td>{{flight.arrivalTime}}</td>
+            <td>{{flight.freeSeats}}</td>
+            <td>{{flight.clientList}}</td>
+            <td>{{flight.price}}</td>
+            <td><button (click)="deleteFlight(flight.id)" class="btn btn-danger">Delete</button>
+                <button (click)="flightDetails(flight.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

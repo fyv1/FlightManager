@@ -11,6 +11,8 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    private String departurePlace;
+    private String arrivalPlace;
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
     private int freeSeats;
@@ -22,7 +24,9 @@ public class Flight {
     public Flight() {
     }
 
-    public Flight(LocalDateTime departureTime, LocalDateTime arrivalTime, int freeSeats, List<Client> clientList, double price) {
+    public Flight(String departurePlace, String arrivalPlace, LocalDateTime departureTime, LocalDateTime arrivalTime, int freeSeats, List<Client> clientList, double price) {
+        this.departurePlace = departurePlace;
+        this.arrivalPlace = arrivalPlace;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
         this.freeSeats = freeSeats;
@@ -36,6 +40,22 @@ public class Flight {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getDeparturePlace() {
+        return departurePlace;
+    }
+
+    public void setDeparturePlace(String departurePlace) {
+        this.departurePlace = departurePlace;
+    }
+
+    public String getArrivalPlace() {
+        return arrivalPlace;
+    }
+
+    public void setArrivalPlace(String arrivalPlace) {
+        this.arrivalPlace = arrivalPlace;
     }
 
     public LocalDateTime getDepartureTime() {
@@ -82,6 +102,8 @@ public class Flight {
     public String toString() {
         return "Flight{" +
                 "id=" + id +
+                ", departurePlace='" + departurePlace + '\'' +
+                ", arrivalPlace='" + arrivalPlace + '\'' +
                 ", departureTime=" + departureTime +
                 ", arrivalTime=" + arrivalTime +
                 ", freeSeats=" + freeSeats +
