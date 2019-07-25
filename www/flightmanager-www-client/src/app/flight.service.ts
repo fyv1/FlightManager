@@ -27,7 +27,7 @@ export class FlightService {
     return this.http.delete(`${this.url}/${id}`, { responseType: 'text' });
   }
 
-  getFlightList(): Observable<any> {
+  getFlightsList(): Observable<any> {
     return this.http.get(`${this.url}`);
   }
 }

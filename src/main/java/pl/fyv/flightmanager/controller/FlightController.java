@@ -1,13 +1,19 @@
 package pl.fyv.flightmanager.controller;
 
+import org.joda.time.LocalDate;
+import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.fyv.flightmanager.exceptions.FlightNotFoundException;
+import pl.fyv.flightmanager.model.Client;
 import pl.fyv.flightmanager.model.Flight;
 import pl.fyv.flightmanager.repository.FlightRepo;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -72,5 +78,9 @@ public class FlightController {
         response.put("deleted", Boolean.TRUE);
         return response;
     }
+
+
+
+
 
 }

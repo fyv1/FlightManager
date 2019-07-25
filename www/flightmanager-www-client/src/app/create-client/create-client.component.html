@@ -11,10 +11,10 @@
         <input type="text" class="form-control" id="lastName" required [(ngModel)]="client.lastName" name="lastName">
       </div>
 
-    <div class="form-group" [(ngModel)]="client.sex" name="sex">
-      <label for="sex">Sex</label>
-      <input type="radio" name="sex" value="male" > Male<br>
-      <input type="radio" name="sex" value="female"> Female<br>
+    <div class="form-group"  >
+      <label for="sex">Sex</label><br>
+      <input type="radio" name="sex" value="male" [(ngModel)]="client.sex"> Male<br>
+      <input type="radio" name="sex" value="female" [(ngModel)]="client.sex"> Female<br>
     </div>
 
     <div class="form-group">
@@ -274,7 +274,7 @@
 
       <div class="form-group">
         <label for="notes">Birthday</label>
-        <input type="datetime" class="form-control" id="notes" required [(ngModel)]="client.birthday" name="birthday">
+        <input type="datetime-local" class="form-control" id="notes" required [(ngModel)]="client.birthday" name="birthday">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
