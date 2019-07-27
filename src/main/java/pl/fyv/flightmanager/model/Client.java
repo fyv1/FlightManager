@@ -1,5 +1,7 @@
 package pl.fyv.flightmanager.model;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.joda.time.LocalDate;
 
 import javax.persistence.*;
@@ -25,6 +27,7 @@ public class Client {
             joinColumns = @JoinColumn(name="client_id"),
             inverseJoinColumns = @JoinColumn(name="flight_id")
     )
+    @Fetch(FetchMode.JOIN)
     private List<Flight> flightList;
 
     public Client() {

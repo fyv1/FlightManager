@@ -1,5 +1,7 @@
 package pl.fyv.flightmanager.model;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.joda.time.LocalDateTime;
 
 import javax.persistence.*;
@@ -18,6 +20,7 @@ public class Flight {
     private int freeSeats;
 
     @ManyToMany(mappedBy = "flightList")
+    @Fetch(FetchMode.JOIN)
     private List<Client> clientList;
 
     private double price;
