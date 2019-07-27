@@ -16,9 +16,10 @@ public class Flight {
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
     private int freeSeats;
-    @ElementCollection
-    @CollectionTable(name="client")
+
+    @ManyToMany(mappedBy = "flightList")
     private List<Client> clientList;
+
     private double price;
 
     public Flight() {

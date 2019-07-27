@@ -18,8 +18,13 @@ public class Client {
     private String country;
     private String notes;
     private LocalDate birthdate;
-    @ElementCollection
-    @CollectionTable(name="flight")
+
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name="clients_flights",
+            joinColumns = @JoinColumn(name="client_id"),
+            inverseJoinColumns = @JoinColumn(name="flight_id")
+    )
     private List<Flight> flightList;
 
     public Client() {

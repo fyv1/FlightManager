@@ -7,11 +7,11 @@ import { CreateFlightComponent } from './create-flight/create-flight.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'flight', pathMatch: 'full' },
+  { path: '', redirectTo: 'flights', pathMatch: 'full' },
   { path: 'clients', component: ClientListComponent },
-  { path: 'clients/add', component: CreateClientComponent },
+  { path: 'client/add', component: CreateClientComponent },
   { path: 'flights', component: FlightListComponent },
-  { path: 'flights/add', component: CreateFlightComponent}
+  { path: 'flight/add', component: CreateFlightComponent}
 ];
 
 @NgModule({

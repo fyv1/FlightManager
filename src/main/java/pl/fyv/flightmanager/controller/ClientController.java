@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
+@RestController @CrossOrigin(origins = "*")
 @RequestMapping("/api/")
 public class ClientController {
 
@@ -37,7 +37,7 @@ public class ClientController {
         return ResponseEntity.ok().body(client);
     }
 
-    @PostMapping("/client/{id}")
+    @PostMapping("/client")
     public Client createClient(@Valid @RequestBody Client client) {
         return repo.save(client);
     }
@@ -71,6 +71,7 @@ public class ClientController {
         response.put("deleted", Boolean.TRUE);
         return response;
     }
+
 
 
 }

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class FlightService {
   
-  private url = 'http://localhost:8080/api/flights';
+  private url = 'http://localhost:8080/api/flight';
 
   constructor(private http: HttpClient) { }
 
@@ -28,6 +28,6 @@ export class FlightService {
   }
 
   getFlightsList(): Observable<any> {
-    return this.http.get(`${this.url}`);
+    return this.http.get(`${this.url}s`);
   }
 }

@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
+@RestController @CrossOrigin(origins = "*")
 @RequestMapping("/api/")
 public class FlightController {
 
@@ -44,7 +44,7 @@ public class FlightController {
         return ResponseEntity.ok().body(flight);
     }
 
-    @PostMapping("/flight/{id}")
+    @PostMapping("/flight")
     public Flight createFlight(@Valid @RequestBody Flight flight) {
         return repo.save(flight);
     }
