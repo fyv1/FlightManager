@@ -22,10 +22,12 @@
     <div class="form-group">
         <label for="clientList">Clients</label>
         <!-- <input type="" class="form-control" id="departureTime" [(ngModel)]="flight.clientList" name="clientList"> -->
-        <select name="clientList" id="clientList" [(ngModel)]="flight.clientList" ></select>
-        <option *ngFor="let client of clients | async" [value]="client.id">
-            {{client.id}} | {{client.firstName}} {{client.lastName}}
-        </option>
+        <select name="clientList" id="clientList" [(ngModel)]="flight.clientList" >
+          <option *ngFor="let client of clients | async" [value]="client.id">
+              {{client.id}} | {{client.firstName}} {{client.lastName}}
+          </option>
+        </select>
+
 
     </div>
 
