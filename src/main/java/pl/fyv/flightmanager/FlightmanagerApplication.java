@@ -18,6 +18,7 @@ public class FlightmanagerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(FlightmanagerApplication.class, args);
+        System.out.println(org.hibernate.Version.getVersionString());
     }
 
 //

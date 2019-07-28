@@ -2,6 +2,7 @@ package pl.fyv.flightmanager.model;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
 
 import javax.persistence.*;
@@ -19,6 +20,8 @@ public class Client {
     private String sex;
     private String country;
     private String notes;
+
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
     private LocalDate birthdate;
 
     @ManyToMany(cascade = { CascadeType.ALL })

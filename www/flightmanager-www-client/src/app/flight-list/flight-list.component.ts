@@ -36,7 +36,7 @@ export class FlightListComponent implements OnInit {
   }
 
   flightDetails(id: number) {
-    this.router.navigate(['flight-details', id]);
+    this.router.navigate(['flight', id]);
   }
 
 }
