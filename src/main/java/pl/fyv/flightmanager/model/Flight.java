@@ -1,5 +1,6 @@
 package pl.fyv.flightmanager.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Type;
@@ -25,6 +26,7 @@ public class Flight {
 
     @ManyToMany(mappedBy = "flightList")
     @Fetch(FetchMode.JOIN)
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     private List<Client> clientList;
 
     private double price;
