@@ -20,6 +20,11 @@
     </div>
 
     <div class="form-group">
+      <label for="freeSeats">Free Seats</label>
+      <input type="number" class="form-control" min="0" id="freeSeats" required [(ngModel)]="flight.freeSeats" name="freeSeats">
+  </div>
+
+    <div class="form-group">
         <label for="clientList">Clients</label>
         <!-- <input type="" class="form-control" id="departureTime" [(ngModel)]="flight.clientList" name="clientList"> -->
         <select name="clientList" id="clientList" [(ngModel)]="flight.clientList" >

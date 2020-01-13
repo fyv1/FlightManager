@@ -46,9 +46,6 @@ public class FlightController {
 
     @PostMapping("/flight")
     public Flight createFlight(@Valid @RequestBody Flight flight) {
-
-        System.out.println(flight.getDepartureTime());
-
         return repo.save(flight);
     }
 
@@ -81,11 +78,5 @@ public class FlightController {
         response.put("deleted", Boolean.TRUE);
         return response;
     }
-
-
-
-
-
-
 
 }
