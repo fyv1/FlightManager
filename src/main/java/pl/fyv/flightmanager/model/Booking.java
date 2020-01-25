@@ -10,13 +10,22 @@ public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private long bookingId;
+    private long itemId;
     private long clientId;
     private String status;
     private DateTime arrive;
     private DateTime departure;
 
     public Booking() {
+    }
+
+    public Booking(long id, long itemId, long clientId, String status, DateTime arrive, DateTime departure) {
+        this.id = id;
+        this.itemId = itemId;
+        this.clientId = clientId;
+        this.status = status;
+        this.arrive = arrive;
+        this.departure = departure;
     }
 
     public long getId() {
@@ -27,12 +36,12 @@ public class Booking {
         this.id = id;
     }
 
-    public long getBookingId() {
-        return bookingId;
+    public long getItemId() {
+        return itemId;
     }
 
-    public void setBookingId(long bookingId) {
-        this.bookingId = bookingId;
+    public void setItemId(long bookingId) {
+        this.itemId = bookingId;
     }
 
     public long getClientId() {
@@ -71,7 +80,7 @@ public class Booking {
     public String toString() {
         return "Booking{" +
                 "id=" + id +
-                ", hotelId=" + bookingId +
+                ", hotelId=" + itemId +
                 ", clientId=" + clientId +
                 ", status='" + status + '\'' +
                 ", arrive=" + arrive +

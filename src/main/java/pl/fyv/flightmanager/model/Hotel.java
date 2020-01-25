@@ -13,7 +13,12 @@ public class Hotel {
     private String address;
 
     public Hotel() {
+    }
 
+    public Hotel(long id, String name, String address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
     }
 
     public long getId() {
