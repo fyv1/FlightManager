@@ -24,12 +24,12 @@ public class HotelController {
     }
 
     @GetMapping("/hotels")
-    public List<Hotel> getAllhotels() {
+    public List<Hotel> getAllHotels() {
         return repo.findAll();
     }
 
     @GetMapping("/hotel/{id}")
-    public ResponseEntity<Hotel> gethotelById(@PathVariable(value = "id") Long hotelId)
+    public ResponseEntity<Hotel> getHotelById(@PathVariable(value = "id") Long hotelId)
             throws HotelNotFoundException {
         Hotel hotel = repo.findById(hotelId)
                 .orElseThrow(HotelNotFoundException::new);
@@ -38,12 +38,12 @@ public class HotelController {
     }
 
     @PostMapping("/hotel")
-    public Hotel createhotel(@Valid @RequestBody Hotel hotel) {
+    public Hotel createHotel(@Valid @RequestBody Hotel hotel) {
         return repo.save(hotel);
     }
 
     @PutMapping("/hotel/{id}")
-    public ResponseEntity<Hotel> updatehotel(@PathVariable(value = "id") Long hotelId, @Valid @RequestBody Hotel hotelUpdateInfo)
+    public ResponseEntity<Hotel> updateHotel(@PathVariable(value = "id") Long hotelId, @Valid @RequestBody Hotel hotelUpdateInfo)
             throws HotelNotFoundException {
         Hotel hotel = repo.findById(hotelId)
                 .orElseThrow(HotelNotFoundException::new);
@@ -57,7 +57,7 @@ public class HotelController {
     }
 
     @DeleteMapping("/hotel/{id}")
-    public Map<String, Boolean> deletehotel(@PathVariable(value = "id") Long hotelId)
+    public Map<String, Boolean> deleteHotel(@PathVariable(value = "id") Long hotelId)
             throws HotelNotFoundException {
         Hotel hotel = repo.findById(hotelId)
                 .orElseThrow(HotelNotFoundException::new);
