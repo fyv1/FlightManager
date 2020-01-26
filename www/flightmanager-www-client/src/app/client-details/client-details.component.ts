@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../client';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from '../client.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class ClientDetailsComponent implements OnInit {
 
   client: Client = new Client();
 
-  constructor(private route: ActivatedRoute, private clientService: ClientService) { }
+  constructor(private route: ActivatedRoute, private clientService: ClientService, private router: Router) { }
 
   ngOnInit() {
     this.clientService.getClient(this.route.snapshot.params.id).subscribe((data) => {
@@ -26,6 +26,7 @@ export class ClientDetailsComponent implements OnInit {
       data => {
         console.log(data);
       },
-      error => console.log(error));
+      error => console.log(error),
+      () => this.router.navigate(['/clients']));
   }
 }
