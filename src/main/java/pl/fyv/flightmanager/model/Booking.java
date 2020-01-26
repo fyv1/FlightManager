@@ -1,8 +1,7 @@
 package pl.fyv.flightmanager.model;
 
-import org.joda.time.DateTime;
-
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "booking")
@@ -13,13 +12,13 @@ public class Booking {
     private long itemId;
     private long clientId;
     private String status;
-    private DateTime arrive;
-    private DateTime departure;
+    private LocalDateTime arrive;
+    private LocalDateTime departure;
 
     public Booking() {
     }
 
-    public Booking(long id, long itemId, long clientId, String status, DateTime arrive, DateTime departure) {
+    public Booking(long id, long itemId, long clientId, String status, LocalDateTime arrive, LocalDateTime departure) {
         this.id = id;
         this.itemId = itemId;
         this.clientId = clientId;
@@ -60,19 +59,19 @@ public class Booking {
         this.status = status;
     }
 
-    public DateTime getArrive() {
+    public LocalDateTime getArrive() {
         return arrive;
     }
 
-    public void setArrive(DateTime arrive) {
+    public void setArrive(LocalDateTime arrive) {
         this.arrive = arrive;
     }
 
-    public DateTime getDeparture() {
+    public LocalDateTime getDeparture() {
         return departure;
     }
 
-    public void setDeparture(DateTime departure) {
+    public void setDeparture(LocalDateTime departure) {
         this.departure = departure;
     }
 
