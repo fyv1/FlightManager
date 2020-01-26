@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ClientService {
 
-  private url = 'http://localhost:8080/api/client';
+  private url = 'https://simpleflight.herokuapp.com/api/client';
 
   constructor(private http: HttpClient) { }
 

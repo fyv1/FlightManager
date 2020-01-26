@@ -14,7 +14,7 @@ export class ClientListComponent implements OnInit {
   clients: Observable<Client[]>;
 
   constructor(private clientService: ClientService,
-    private router: Router) { }
+              private router: Router) { }
 
   ngOnInit() {
     this.reloadData();
@@ -32,7 +32,7 @@ export class ClientListComponent implements OnInit {
           this.reloadData();
         },
         error => console.log(error));
-      
+
   }
 
   clientDetails(id: number) {

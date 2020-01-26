@@ -12,14 +12,14 @@ import { ClientService } from 'src/app/client.service';
   styleUrls: ['./create-flight.component.css']
 })
 export class CreateFlightComponent implements OnInit {
-  
+
   flight: Flight = new Flight();
   clients: Observable<Client[]>;
   submitted = false;
 
   constructor(private flightService: FlightService,
-    private clientService: ClientService,
-    private router: Router
+              private clientService: ClientService,
+              private router: Router
   ) { }
 
   ngOnInit() {
@@ -37,8 +37,8 @@ export class CreateFlightComponent implements OnInit {
   save() {
     this.flightService.createFlight(this.flight)
       .subscribe(data => console.log(data), error => console.log(error));
-      this.flight = new Flight();
-      this.gotoFlightList();
+    this.flight = new Flight();
+    this.gotoFlightList();
   }
   onSubmit() {
     this.submitted = true;

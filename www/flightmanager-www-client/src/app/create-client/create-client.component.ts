@@ -14,7 +14,7 @@ export class CreateClientComponent implements OnInit {
   submitted = false;
 
   constructor(private clientService: ClientService,
-    private router: Router) { }
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,8 +26,8 @@ export class CreateClientComponent implements OnInit {
   save() {
     this.clientService.createClient(this.client)
       .subscribe(data => console.log(data), error => console.log(error));
-      this.client = new Client();
-      this.gotoClientList();
+    this.client = new Client();
+    this.gotoClientList();
   }
   onSubmit() {
     this.submitted = true;

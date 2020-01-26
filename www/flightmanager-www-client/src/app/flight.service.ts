@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FlightService {
-  
-  private url = 'http://localhost:8080/api/flight';
+
+  private url = 'https://simpleflight.herokuapp.com/api/flight';
 
   constructor(private http: HttpClient) { }
 
