@@ -1,8 +1,7 @@
 package pl.fyv.flightmanager.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.fyv.flightmanager.exceptions.CarNotFoundException;
