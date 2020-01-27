@@ -15,6 +15,10 @@ import { CreateCarComponent } from './create-car/create-car.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { CreateHotelComponent } from './create-hotel/create-hotel.component';
+import { CreateBookingComponent } from './create-booking/create-booking.component';
+import { BookingListComponent } from './booking-list/booking-list.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
+import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { CreateHotelComponent } from './create-hotel/create-hotel.component';
     CreateCarComponent,
     CarListComponent,
     HotelListComponent,
-    CreateHotelComponent
+    CreateHotelComponent,
+    CreateBookingComponent,
+    BookingListComponent,
+    CarDetailsComponent,
+    HotelDetailsComponent
   ],
   imports: [
     BrowserModule,
