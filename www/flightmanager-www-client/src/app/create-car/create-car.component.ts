@@ -20,8 +20,7 @@ export class CreateCarComponent implements OnInit {
 
   onCreateCar() {
     this.carService.createCar(this.car)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.gotoCarsList();
+      .subscribe(data => console.log(data), error => console.log(error), () => this.gotoCarsList());
   }
 
   gotoCarsList() {

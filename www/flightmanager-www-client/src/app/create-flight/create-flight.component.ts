@@ -36,9 +36,8 @@ export class CreateFlightComponent implements OnInit {
   }
   save() {
     this.flightService.createFlight(this.flight)
-      .subscribe(data => console.log(data), error => console.log(error));
+      .subscribe(data => console.log(data), error => console.log(error), () => this.gotoFlightList());
     this.flight = new Flight();
-    this.gotoFlightList();
   }
   onSubmit() {
     this.submitted = true;
@@ -48,6 +47,4 @@ export class CreateFlightComponent implements OnInit {
   gotoFlightList() {
     this.router.navigate(['/flights']);
   }
-
-
 }

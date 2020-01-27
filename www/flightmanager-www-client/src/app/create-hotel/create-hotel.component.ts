@@ -20,14 +20,10 @@ export class CreateHotelComponent implements OnInit {
 
   onCreateHotel() {
     this.hotelService.createHotel(this.hotel)
-      // .subscribe(
-      //   data => console.log(data),
-      //   error => console.log(error),
-      //   () => this.gotoHotelsList());
       .subscribe(
         data => console.log(data),
-        error => console.log(error));
-    this.gotoHotelsList();
+        error => console.log(error),
+        () => this.gotoHotelsList());
   }
 
   gotoHotelsList() {
