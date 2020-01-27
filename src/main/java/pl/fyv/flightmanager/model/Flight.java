@@ -3,10 +3,10 @@ package pl.fyv.flightmanager.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.Type;
-import org.joda.time.LocalDateTime;
+
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -18,9 +18,7 @@ public class Flight {
     private String departurePlace;
     private String arrivalPlace;
 
-    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
     private LocalDateTime departureTime;
-    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
     private LocalDateTime arrivalTime;
     private int freeSeats;
 

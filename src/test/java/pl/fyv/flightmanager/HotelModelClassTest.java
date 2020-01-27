@@ -2,7 +2,6 @@ package pl.fyv.flightmanager;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.fyv.flightmanager.model.Car;
 import pl.fyv.flightmanager.model.Hotel;
 
 import static org.junit.Assert.assertEquals;

@@ -1,15 +1,10 @@
 package pl.fyv.flightmanager;
 
-import org.joda.time.LocalDate;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.fyv.flightmanager.model.Client;
-
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
-// @RunWith(Parameterized.class)
 public  class ClientModelClassTest  {
 
     public static Client client;
@@ -70,3 +65,4 @@ public  class ClientModelClassTest  {
 //    }
 
 }
+

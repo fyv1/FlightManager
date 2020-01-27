@@ -3,10 +3,9 @@ package pl.fyv.flightmanager.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.Type;
-import org.joda.time.LocalDate;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -21,9 +20,7 @@ public class Client {
     private String sex;
     private String country;
     private String notes;
-
-    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    private LocalDate birthdate;
+    private LocalDateTime birthdate;
 
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
@@ -38,7 +35,7 @@ public class Client {
     public Client() {
     }
 
-    public Client(String firstName, String lastName, String sex, String country, String notes, LocalDate birthdate, List<Flight> flightList) {
+    public Client(String firstName, String lastName, String sex, String country, String notes, LocalDateTime birthdate, List<Flight> flightList) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.sex = sex;
@@ -96,11 +93,11 @@ public class Client {
         this.notes = notes;
     }
 
-    public LocalDate getBirthdate() {
+    public LocalDateTime getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
+    public void setBirthdate(LocalDateTime birthdate) {
         this.birthdate = birthdate;
     }
 
