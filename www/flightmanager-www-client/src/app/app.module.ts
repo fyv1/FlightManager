@@ -13,6 +13,8 @@ import { ClientListComponent } from './client-list/client-list.component';
 import { FlightListComponent } from './flight-list/flight-list.component';
 import { CreateCarComponent } from './create-car/create-car.component';
 import { CarListComponent } from './car-list/car-list.component';
+import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { CreateHotelComponent } from './create-hotel/create-hotel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CarListComponent } from './car-list/car-list.component';
     ClientListComponent,
     FlightListComponent,
     CreateCarComponent,
-    CarListComponent
+    CarListComponent,
+    HotelListComponent,
+    CreateHotelComponent
   ],
   imports: [
     BrowserModule,

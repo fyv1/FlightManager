@@ -1,3 +1,5 @@
+import { CreateHotelComponent } from './create-hotel/create-hotel.component';
+import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { CreateCarComponent } from './create-car/create-car.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'flight/add', component: CreateFlightComponent},
   { path: 'cars', component: CarListComponent },
   { path: 'car/add', component: CreateCarComponent},
+  { path: 'hotels', component: HotelListComponent },
+  { path: 'hotel/add', component: CreateHotelComponent},
   { path: 'client/:id', component: ClientDetailsComponent},
   { path: 'flight/:id', component: FlightDetailsComponent}
 ];
