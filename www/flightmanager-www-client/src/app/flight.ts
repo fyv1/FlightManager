@@ -4,7 +4,7 @@ export class Flight {
     id: number;
     departurePlace: string;
     arrivalPlace: string;
-    deparatureTime: Date;
+    departureTime: Date;
     arrivalTime: Date;
     freeSeats: number;
     clientList: Array<Client>;

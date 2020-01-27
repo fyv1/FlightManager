@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Car List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Mileage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars | async">
+          <td>{{car.model}}</td>
+          <td>{{car.mileage}}</td>
+          <td><button (click)="deleteCar(car.id)" class="btn btn-danger">Delete</button>
+              <button (click)="carDetails(car.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

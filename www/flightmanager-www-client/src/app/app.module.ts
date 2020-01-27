@@ -11,6 +11,8 @@ import { ClientDetailsComponent } from './client-details/client-details.componen
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import { FlightListComponent } from './flight-list/flight-list.component';
+import { CreateCarComponent } from './create-car/create-car.component';
+import { CarListComponent } from './car-list/car-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FlightListComponent } from './flight-list/flight-list.component';
     ClientDetailsComponent,
     FlightDetailsComponent,
     ClientListComponent,
-    FlightListComponent
+    FlightListComponent,
+    CreateCarComponent,
+    CarListComponent
   ],
   imports: [
     BrowserModule,

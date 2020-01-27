@@ -1,3 +1,5 @@
+import { CarListComponent } from './car-list/car-list.component';
+import { CreateCarComponent } from './create-car/create-car.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ClientListComponent } from './client-list/client-list.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'client/add', component: CreateClientComponent },
   { path: 'flights', component: FlightListComponent },
   { path: 'flight/add', component: CreateFlightComponent},
+  { path: 'cars', component: CarListComponent },
+  { path: 'car/add', component: CreateCarComponent},
   { path: 'client/:id', component: ClientDetailsComponent},
   { path: 'flight/:id', component: FlightDetailsComponent}
 ];
