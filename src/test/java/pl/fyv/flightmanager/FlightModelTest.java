@@ -30,27 +30,15 @@ public class FlightModelTest {
     }
 
     @Test
-    public void isSetArrivalTime() {
-        booking.setArrive(java.time.LocalDateTime.parse("2020-01-02T11:33:55"));
-        assertEquals("2020-01-02T11:33:55", booking.getArrive());
-    }
-
-    @Test
-    public void isSetDepartureTime() {
-        booking.setDeparture(java.time.LocalDateTime.parse("2020-01-03T12:34:00"));
-        assertEquals("2020-01-02T11:33:55", booking.getDeparture());
-    }
-
-    @Test
     public void isFreeSeats() {
-        flight.setArrivalPlace("58B");
-        assertEquals("58B", flight.getFreeSeats());
+        flight.setFreeSeats(58);
+        assertEquals(58, flight.getFreeSeats());
     }
 
-  /*  @Test
-    public void isPrice() {
-        flight.setPrice(139.99);
-        assertEquals(139.99, flight.getPrice());
-    }  */
+//    @Test
+//    public void isPrice() {
+//        flight.setPrice(139.99d);
+//        assertEquals(139.99d, flight.getPrice());
+//    }
 }
 

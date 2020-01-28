@@ -12,7 +12,7 @@ import pl.fyv.flightmanager.repository.CarRepo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
-public class CarControllerTets {
+public class CarControllerTest {
 
     private MockMvc mockMvc;
 
