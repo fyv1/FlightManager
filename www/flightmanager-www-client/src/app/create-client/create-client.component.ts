@@ -25,9 +25,8 @@ export class CreateClientComponent implements OnInit {
   }
   save() {
     this.clientService.createClient(this.client)
-      .subscribe(data => console.log(data), error => console.log(error));
+      .subscribe(data => console.log(data), error => console.log(error), () => this.gotoClientList());
     this.client = new Client();
-    this.gotoClientList();
   }
   onSubmit() {
     this.submitted = true;

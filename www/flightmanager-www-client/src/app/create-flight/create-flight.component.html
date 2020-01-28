@@ -27,7 +27,7 @@
     <div class="form-group">
         <label for="clientList">Clients</label>
         <!-- <input type="" class="form-control" id="departureTime" [(ngModel)]="flight.clientList" name="clientList"> -->
-        <select name="clientList" id="clientList" [(ngModel)]="flight.clientList" >
+        <select name="clientList" id="clientList" [(ngModel)]="flight.clientList" class="form-control" >
           <option *ngFor="let client of clients | async" [value]="client.id">
               {{client.id}} | {{client.firstName}} {{client.lastName}}
           </option>

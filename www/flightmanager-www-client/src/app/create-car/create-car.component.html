@@ -1,0 +1,14 @@
+<h3>Create Car</h3>
+<form (ngSubmit)="onCreateCar()">
+  <div class="form-group">
+    <label for="Model">Model</label>
+    <input type="text" class="form-control" id="Model" required [(ngModel)]="car.model" name="Model">
+  </div>
+
+  <div class="form-group">
+    <label for="Mileage">Mileage</label>
+    <input type="number" class="form-control" id="Mileage" required [(ngModel)]="car.mileage" name="Mileage">
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

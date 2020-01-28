@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Booking List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Arrival</th>
+          <th>Departure</th>
+          <th>Client</th>
+          <th>Item</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings | async">
+          <td>{{booking.arrive}}</td>
+          <td>{{booking.departure}}</td>
+          <td>{{booking.clientId}}</td>
+          <td>{{booking.itemId}}</td>
+          <td>{{booking.status}}</td>
+          <td><button (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
+              <button (click)="bookingDetails(booking.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
