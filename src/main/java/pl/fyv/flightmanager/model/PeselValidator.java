@@ -1,28 +1,14 @@
 package pl.fyv.flightmanager.model;
 
 public class PeselValidator {
-    private String Pesel;
 
-    PeselValidator(String Pesel) {
-        this.Pesel = Pesel;
-    }
-
-    public String getPesel() {
-        return Pesel;
-    }
-    public boolean isCorrect(String Pesel) {
-
-        try {
-            containsDigits(Pesel);
-            Length(Pesel);
-        } catch (IllegalArgumentException ex) {
-            ex.printStackTrace();
-            return false;
-        }
+    public static boolean isCorrect(String Pesel) {
+        containsDigits(Pesel);
+        Length(Pesel);
         return true;
     }
 
-    private void containsDigits(String pesel) {
+    private static void containsDigits(String pesel) {
 
         char[] peselAr = pesel.toCharArray();
         for (char c : peselAr)
@@ -31,7 +17,7 @@ public class PeselValidator {
 
     }
 
-    private void Length(String pesel) {
+    private static void Length(String pesel) {
         if (String.valueOf(pesel).length() != 11) {
             throw new IllegalArgumentException("PESEL musi zawierac 11 liczb");
         }
