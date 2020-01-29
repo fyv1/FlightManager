@@ -3,6 +3,13 @@ package pl.fyv.flightmanager;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.fyv.flightmanager.model.Client;
+import pl.fyv.flightmanager.model.Flight;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 public  class ClientModelClassTest  {
@@ -50,18 +57,21 @@ public  class ClientModelClassTest  {
         client.setNotes("Notes");
         assertEquals("Notes", client.getNotes());
     }
-//    @Test
-//    public void isSetBirthdate_ReturnDate() {
-//        LocalDate localDate = LocalDate.of(1997,4,26);
-//        client.setBirthdate(localDate);
-//        assertEquals(localDate, client.getBirthdate());
-//    }
+    @Test
+    public void isSetBirthdate_ReturnDate() {
+        LocalDateTime localDateTime = java.time.LocalDateTime.parse("2020-01-03T12:34:00");
+        client.setBirthdate(localDateTime);
+        assertEquals(localDateTime, client.getBirthdate());
+    }
 
 //    @Test
 //    public void setFlightList_ReturnFlightList() {
+//        Flight flight = new Flight();
+//        List<Flight> flightList = new ArrayList<>();
+//        flightList.add(flight);
 //
-//        client.setFlightList(List.of());
-//        assertEquals("Notes", client.getFlightList());
+//        client.setFlightList(flightList);
+//        Assert.assertEquals(flight, client.getFlightList());
 //    }
 
 }
