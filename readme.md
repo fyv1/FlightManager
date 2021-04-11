@@ -11,4 +11,9 @@ Simple REST API app for managing flights. You can create a flight, set its desti
 
 Deployed on Heroku.
 
-Click [here](https://simpleflight.herokuapp.com "Live demo") to see live demo!
+**Example use**
+![Creating flight](https://raw.githubusercontent.com/fyv1/FlightManager/master/readmePage/flightmanager1.png)
+![Creating client](https://raw.githubusercontent.com/fyv1/FlightManager/master/readmePage/flightmanager2.png)
+![Client list](https://raw.githubusercontent.com/fyv1/FlightManager/master/readmePage/flightmanager3.png)
+![Creating flight with client](https://raw.githubusercontent.com/fyv1/FlightManager/master/readmePage/flightmanager4.png)
+![Submitted successfully](https://raw.githubusercontent.com/fyv1/FlightManager/master/readmePage/flightmanager5.png)
