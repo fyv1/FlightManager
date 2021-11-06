@@ -24,3 +24,10 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+    triggers:
+    - schedule:
+        cron: "27 12 * * *"
+        filters:
+          branches:
+            only:
+              - main
